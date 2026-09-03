@@ -1,0 +1,18 @@
+package com.example.king.domain.user.dto.response;
+
+import com.example.king.domain.user.entity.Role;
+import com.example.king.domain.user.entity.User;
+
+public record SignUpResponse(
+    Long id,
+    String username,
+    Role role
+) {
+    public SignUpResponse(User user){
+        this(
+                user.getId(),
+                user.getUserName(),
+                user.getRole()
+        );
+    }
+}
