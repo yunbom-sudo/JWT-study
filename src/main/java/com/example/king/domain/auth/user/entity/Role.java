@@ -1,4 +1,4 @@
-package com.example.king.domain.user.entity;
+package com.example.king.domain.auth.user.entity;
 
 public enum Role {
     ROLE_USER,

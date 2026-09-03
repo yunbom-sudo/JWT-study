@@ -1,7 +1,7 @@
-package com.example.king.domain.user.dto.request;
+package com.example.king.domain.auth.user.dto.request;
 
-import com.example.king.domain.user.entity.Role;
-import com.example.king.domain.user.entity.User;
+import com.example.king.domain.auth.user.entity.Role;
+import com.example.king.domain.auth.user.entity.User;
 
 public record SignUpRequest(
         String username,

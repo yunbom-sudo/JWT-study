@@ -1,7 +1,7 @@
-package com.example.king.domain.user.dto.response;
+package com.example.king.domain.auth.user.dto.response;
 
-import com.example.king.domain.user.entity.Role;
-import com.example.king.domain.user.entity.User;
+import com.example.king.domain.auth.user.entity.Role;
+import com.example.king.domain.auth.user.entity.User;
 
 public record SignUpResponse(
     Long id,

@@ -1,9 +1,9 @@
-package com.example.king.domain.user.service;
+package com.example.king.domain.auth.user.service;
 
-import com.example.king.domain.user.dto.request.SignUpRequest;
-import com.example.king.domain.user.dto.response.SignUpResponse;
-import com.example.king.domain.user.entity.User;
-import com.example.king.domain.user.repository.UserRepository;
+import com.example.king.domain.auth.user.dto.request.SignUpRequest;
+import com.example.king.domain.auth.user.dto.response.SignUpResponse;
+import com.example.king.domain.auth.user.entity.User;
+import com.example.king.domain.auth.user.repository.UserRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
