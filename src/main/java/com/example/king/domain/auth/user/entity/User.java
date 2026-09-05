@@ -25,10 +25,18 @@ public class User {
     @Column(nullable = false)
     private Role role;
 
+    @Column
+    private String refreshToken;
+
     @Builder
-    public User(String userName, String password, Role role){
+    public User(String userName, String password, Role role,String refreshToken){
         this.username = userName;
         this.password = password;
         this.role = role;
+        this.refreshToken = refreshToken;
+    }
+
+    public void updateRefreshToken(String refreshToken) {
+        this.refreshToken = refreshToken;
     }
 }
