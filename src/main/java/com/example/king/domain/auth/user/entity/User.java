@@ -16,7 +16,7 @@ public class User {
     private Long id;
 
     @Column(nullable = false, length = 50, unique = true)
-    private String userName;
+    private String username;
 
     @Column(nullable = false)
     private String password;
@@ -27,7 +27,7 @@ public class User {
 
     @Builder
     public User(String userName, String password, Role role){
-        this.userName = userName;
+        this.username = userName;
         this.password = password;
         this.role = role;
     }

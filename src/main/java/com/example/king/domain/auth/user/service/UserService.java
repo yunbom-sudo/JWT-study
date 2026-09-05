@@ -21,7 +21,7 @@ public class UserService {
     @Transactional
     public SignUpResponse signUp(SignUpRequest request){
 
-        if(userRepository.findByUserName(request.username()).isPresent()){
+        if(userRepository.findByUsername(request.username()).isPresent()){
             throw new RuntimeException("에러 발생!");
         }
 
