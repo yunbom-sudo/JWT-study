@@ -4,6 +4,8 @@ import com.example.king.domain.auth.user.dto.request.SignUpRequest;
 import com.example.king.domain.auth.user.dto.response.SignUpResponse;
 import com.example.king.domain.auth.user.entity.User;
 import com.example.king.domain.auth.user.repository.UserRepository;
+import com.example.king.global.exception.BusinessException;
+import com.example.king.global.exception.ErrorCode;
 import lombok.RequiredArgsConstructor;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
@@ -22,7 +24,7 @@ public class UserService {
     public SignUpResponse signUp(SignUpRequest request){
 
         if(userRepository.findByUsername(request.username()).isPresent()){
-            throw new RuntimeException("에러 발생!");
+            throw new BusinessException(ErrorCode.DUPLICATE_USERNAME);
         }
 
         String encodedPassword = bCryptPasswordEncoder.encode(request.password());
